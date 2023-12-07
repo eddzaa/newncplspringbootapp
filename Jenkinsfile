@@ -81,14 +81,14 @@ stage("Jar Publish") {
                 }
             }   
         }    
-//   stage('Build Docker Image') {
-//             steps {
-//                 script {
-//                     // Build the Docker image
-//                     sh 'docker build -t myrepo .'
-//                 }
-//             }
-//     }
+  stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build the Docker image
+                    sh 'docker build -t myrepo .'
+                }
+            }
+    }
 
 //     // Uploading Docker images into AWS ECR
 //     stage('Pushing to ECR') {
