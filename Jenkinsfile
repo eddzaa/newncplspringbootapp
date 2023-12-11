@@ -31,17 +31,7 @@ stage ('Build') {
     }
 
 
-stage('Sonar Analysis') {
-      environment {
-        scannerHome = tool 'SonarQubeScanner'
-      }
-      steps {
-        echo '<--------------- Sonar Analysis started  --------------->'
-                withSonarQubeEnv('SonarQubeScanner') {
-                sh "${scannerHome}/bin/sonar-scanner"
-                }       
-         }
-      }
+
 
 stage("Jar Publish") {
             steps {
